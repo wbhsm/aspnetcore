@@ -1,6 +1,8 @@
 ﻿<Project>
 
   <PropertyGroup>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+
     <!-- Only build Microsoft.AspNetCore.App and ref/ assemblies in source build. -->
     <!-- Analyzer package are needed in source build for WebSDK -->
     <ExcludeFromSourceBuild
@@ -172,6 +174,10 @@
         Version="$(MicrosoftNetCompilersToolsetPackageVersion)"
         PrivateAssets="all"
         IsImplicitlyDefined="true" />
+
+    <Compile Include="$(SharedSourceRoot)SkipLocalsInit.cs">
+      <Link>Shared\SkipLocalsInit.cs</Link>
+    </Compile>
   </ItemGroup>
 
   <PropertyGroup Condition=" '$(CopySymbolsToArtifacts)' == 'true' AND '$(TargetFramework)' != '' ">
