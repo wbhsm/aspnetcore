@@ -221,9 +221,6 @@ Microsoft.AspNetCore.Http.HttpContextAccessor
 Microsoft.AspNetCore.Http.HttpContextAccessor.HttpContext.get -> Microsoft.AspNetCore.Http.HttpContext?
 Microsoft.AspNetCore.Http.HttpContextAccessor.HttpContext.set -> void
 Microsoft.AspNetCore.Http.HttpContextAccessor.HttpContextAccessor() -> void
-Microsoft.AspNetCore.Http.HttpContextFactory
-Microsoft.AspNetCore.Http.HttpContextFactory.Create(Microsoft.AspNetCore.Http.Features.IFeatureCollection! featureCollection) -> Microsoft.AspNetCore.Http.HttpContext!
-Microsoft.AspNetCore.Http.HttpContextFactory.Dispose(Microsoft.AspNetCore.Http.HttpContext! httpContext) -> void
 Microsoft.AspNetCore.Http.HttpRequestRewindExtensions
 Microsoft.AspNetCore.Http.MiddlewareFactory
 Microsoft.AspNetCore.Http.MiddlewareFactory.Create(System.Type! middlewareType) -> Microsoft.AspNetCore.Http.IMiddleware?
@@ -296,7 +293,3 @@ virtual Microsoft.AspNetCore.Http.StreamResponseBodyFeature.CompleteAsync() -> S
 virtual Microsoft.AspNetCore.Http.StreamResponseBodyFeature.DisableBuffering() -> void
 virtual Microsoft.AspNetCore.Http.StreamResponseBodyFeature.SendFileAsync(string! path, long offset, long? count, System.Threading.CancellationToken cancellationToken) -> System.Threading.Tasks.Task!
 virtual Microsoft.AspNetCore.Http.StreamResponseBodyFeature.StartAsync(System.Threading.CancellationToken cancellationToken = default(System.Threading.CancellationToken)) -> System.Threading.Tasks.Task!
-~Microsoft.AspNetCore.Http.HttpContextFactory.HttpContextFactory(Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Http.Features.FormOptions!>! formOptions) -> void
-~Microsoft.AspNetCore.Http.HttpContextFactory.HttpContextFactory(Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Http.Features.FormOptions!>! formOptions, Microsoft.AspNetCore.Http.IHttpContextAccessor? httpContextAccessor) -> void
-~Microsoft.AspNetCore.Http.HttpContextFactory.HttpContextFactory(Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Http.Features.FormOptions!>! formOptions, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory! serviceScopeFactory) -> void
-~Microsoft.AspNetCore.Http.HttpContextFactory.HttpContextFactory(Microsoft.Extensions.Options.IOptions<Microsoft.AspNetCore.Http.Features.FormOptions!>! formOptions, Microsoft.Extensions.DependencyInjection.IServiceScopeFactory! serviceScopeFactory, Microsoft.AspNetCore.Http.IHttpContextAccessor? httpContextAccessor) -> void
